@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phisher Zero — Phishing Detection Browser Extension</title>
+  <link rel="icon" type="image/png" href="fish.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Particle canvas background -->
+  <canvas id="particles"></canvas>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="fish.png" alt="Phisher Zero Logo" />
+        <span>PHISHER<span class="accent">ZERO</span></span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#docs">Docs</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+      <a href="https://chrome.google.com/webstore" target="_blank" class="btn btn-nav">
+        <span class="btn-icon">⬇</span> Get Extension
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="scanline"></div>
+
+    <div class="hero-content">
+      <div class="badge">
+        <span class="pulse-dot"></span> AI-Powered Threat Detection
+      </div>
+
+      <div class="hero-logo-wrap">
+        <img src="fish.png" alt="Phisher Zero" class="hero-logo" />
+        <div class="logo-ring ring1"></div>
+        <div class="logo-ring ring2"></div>
+        <div class="logo-ring ring3"></div>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="line1">PHISHER</span>
+        <span class="line2">ZERO</span>
+      </h1>
+
+      <p class="hero-tagline">
+        Four AI agents. Zero phishing attacks.
+        <br />
+        <span class="sub-tagline">Real-time browser protection that thinks before you click.</span>
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-val">&lt;800ms</span>
+          <span class="stat-label">Detection Speed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val">70+</span>
+          <span class="stat-label">Security Vendors</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-val">4</span>
+          <span class="stat-label">AI Agents</span>
+        </div>
+      </div>
+
+      <div class="hero-cta">
+        <a href="https://chrome.google.com/webstore" target="_blank" class="btn btn-primary">
+          <span class="btn-icon">⬇</span> Download Now — It's Free
+        </a>
+        <a href="#demo" class="btn btn-ghost">Watch Demo</a>
+      </div>
+
+      <div class="scroll-hint">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREAT TICKER -->
+  <div class="threat-ticker">
+    <div class="ticker-label">LIVE THREAT INTEL</div>
+    <div class="ticker-track">
+      <div class="ticker-items">
+        <span class="ticker-item danger">⚠ Credential-harvesting page detected — blocked</span>
+        <span class="ticker-item warn">⚡ Suspicious subdomain pattern identified</span>
+        <span class="ticker-item danger">⚠ VirusTotal: 14/70 vendors flagged this URL</span>
+        <span class="ticker-item warn">⚡ Urgency language detected in email body</span>
+        <span class="ticker-item danger">⚠ IP-based hostname — no legitimate domain</span>
+        <span class="ticker-item warn">⚡ URL shortener redirect chain detected</span>
+        <span class="ticker-item danger">⚠ Impersonation of financial institution blocked</span>
+        <span class="ticker-item warn">⚡ Homoglyph substitution in domain name</span>
+        <span class="ticker-item danger">⚠ Credential-harvesting page detected — blocked</span>
+        <span class="ticker-item warn">⚡ Suspicious subdomain pattern identified</span>
+        <span class="ticker-item danger">⚠ VirusTotal: 14/70 vendors flagged this URL</span>
+        <span class="ticker-item warn">⚡ Urgency language detected in email body</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">// ABOUT</div>
+      <h2 class="section-title">The Threat Is Real.<br /><span class="accent">So Is The Defense.</span></h2>
+      <p class="section-desc">
+        Phishing attacks exploit human psychology — not software bugs. Millions of fake sites go live every year.
+        Traditional blacklists miss zero-day domains for hours after launch. Phisher Zero changes the game with
+        a multi-agent AI pipeline that reasons about deceptive intent, not just known patterns.
+      </p>
+
+      <div class="about-cards">
+        <div class="about-card">
+          <div class="card-icon">🎭</div>
+          <h3>Social Engineering</h3>
+          <p>Attackers impersonate banks, universities, and services. Our NLP Agent understands tone, urgency cues, and manipulation tactics — not just keywords.</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">🔗</div>
+          <h3>Malicious URLs</h3>
+          <p>Zero-day phishing domains bypass blacklists for hours. Our URL Agent applies 8 structural heuristics and cross-references 70+ global threat vendors.</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">🧠</div>
+          <h3>AI Ensemble</h3>
+          <p>No single model is enough. Four specialized agents pool their signals with a weighted ensemble and a red-flag override for confirmed threats.</p>
+        </div>
+        <div class="about-card">
+          <div class="card-icon">💬</div>
+          <h3>Plain-English Verdicts</h3>
+          <p>Most tools give you a red icon and leave you guessing. Phisher Zero explains exactly why something is dangerous — in language anyone can understand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-dark" id="how-it-works">
+    <div class="container">
+      <div class="section-label">// ARCHITECTURE</div>
+      <h2 class="section-title">Four Agents.<br /><span class="accent">One Verdict.</span></h2>
+
+      <div class="pipeline">
+        <div class="pipeline-input">
+          <div class="pipeline-box input-box">
+            <div class="pbox-icon">🌐</div>
+            <div class="pbox-title">Browser Input</div>
+            <div class="pbox-desc">Email body, page content, or URL submitted via Chrome extension popup</div>
+          </div>
+        </div>
+
+        <div class="pipeline-arrow">→</div>
+
+        <div class="agents-grid">
+
+          <div class="agent-card" data-agent="nlp">
+            <div class="agent-badge">Agent 01</div>
+            <div class="agent-icon">🤖</div>
+            <h3 class="agent-name">NLP Agent</h3>
+            <p class="agent-desc">Gemini 1.5 Flash analyzes tone, urgency, fear cues, impersonation patterns, and deceptive calls to action. Falls back to RoBERTa transformer locally.</p>
+            <div class="agent-tags">
+              <span class="tag">Google Gemini 1.5</span>
+              <span class="tag">RoBERTa Fallback</span>
+              <span class="tag">LangChain</span>
+            </div>
+          </div>
+
+          <div class="agent-card" data-agent="url">
+            <div class="agent-badge">Agent 02</div>
+            <div class="agent-icon">🔍</div>
+            <h3 class="agent-name">URL Agent</h3>
+            <p class="agent-desc">Applies 8 structural heuristics (IP hostnames, subdomain depth, TLD anomalies, homoglyphs) then cross-references every link against VirusTotal v3's 70+ vendor database.</p>
+            <div class="agent-tags">
+              <span class="tag">VirusTotal v3</span>
+              <span class="tag">Heuristics</span>
+              <span class="tag">BeautifulSoup</span>
+            </div>
+          </div>
+
+          <div class="agent-card" data-agent="ensemble">
+            <div class="agent-badge">Agent 03</div>
+            <div class="agent-icon">⚖️</div>
+            <h3 class="agent-name">Ensemble Agent</h3>
+            <p class="agent-desc">Combines NLP and URL confidence scores through a weighted model. Red-flag override: a confirmed VirusTotal hit forces a Phishing verdict regardless of other signals.</p>
+            <div class="agent-tags">
+              <span class="tag">Weighted Model</span>
+              <span class="tag">Red-Flag Override</span>
+              <span class="tag">3-Tier Verdict</span>
+            </div>
+          </div>
+
+          <div class="agent-card" data-agent="explainer">
+            <div class="agent-badge">Agent 04</div>
+            <div class="agent-icon">📢</div>
+            <h3 class="agent-name">Explainer Agent</h3>
+            <p class="agent-desc">Synthesizes flagged signals into a mentor-style plain-English explanation with specific findings and actionable safety tips — no technical knowledge required.</p>
+            <div class="agent-tags">
+              <span class="tag">Gemini API</span>
+              <span class="tag">Few-Shot Prompting</span>
+              <span class="tag">XAI</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="pipeline-arrow">→</div>
+
+        <div class="pipeline-output">
+          <div class="verdict-demo">
+            <div class="verdict-card phishing-card">
+              <div class="verdict-icon">🚨</div>
+              <div class="verdict-label">PHISHING</div>
+              <div class="verdict-conf">Confidence: 97%</div>
+              <div class="verdict-reason">"This message uses artificial urgency and links to a domain flagged by 14 security vendors."</div>
+            </div>
+            <div class="verdict-card suspicious-card">
+              <div class="verdict-icon">⚠️</div>
+              <div class="verdict-label">SUSPICIOUS</div>
+              <div class="verdict-conf">Confidence: 61%</div>
+            </div>
+            <div class="verdict-card safe-card">
+              <div class="verdict-icon">✅</div>
+              <div class="verdict-label">SAFE</div>
+              <div class="verdict-conf">Confidence: 94%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tech stack -->
+      <div class="tech-stack">
+        <div class="tech-label">TECHNOLOGY STACK</div>
+        <div class="tech-items">
+          <div class="tech-item">Python 3.11</div>
+          <div class="tech-item">FastAPI</div>
+          <div class="tech-item">Google Gemini 1.5</div>
+          <div class="tech-item">LangChain</div>
+          <div class="tech-item">RoBERTa</div>
+          <div class="tech-item">VirusTotal v3</div>
+          <div class="tech-item">Chrome MV3</div>
+          <div class="tech-item">React 19</div>
+          <div class="tech-item">Docker</div>
+          <div class="tech-item">SQLite</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO VIDEO -->
+  <section class="section" id="demo">
+    <div class="container">
+      <div class="section-label">// DEMO</div>
+      <h2 class="section-title">See It In <span class="accent">Action</span></h2>
+      <p class="section-desc">
+        Watch how Phisher Zero detects a phishing page in under 800 milliseconds — right inside your browser.
+      </p>
+
+      <div class="video-wrapper">
+        <div class="video-frame">
+          <div class="video-corner tl"></div>
+          <div class="video-corner tr"></div>
+          <div class="video-corner bl"></div>
+          <div class="video-corner br"></div>
+          <a href="https://youtu.be/2whWWjuWghw" target="_blank" class="video-thumb">
+            <img
+              src="https://img.youtube.com/vi/2whWWjuWghw/maxresdefault.jpg"
+              alt="Phisher Zero Demo Thumbnail"
+              class="thumb-img"
+              onerror="this.src='https://img.youtube.com/vi/2whWWjuWghw/hqdefault.jpg'"
+            />
+            <div class="thumb-overlay">
+              <div class="play-btn">
+                <svg viewBox="0 0 68 48" width="68" height="48">
+                  <path d="M66.5 7.8a8.5 8.5 0 0 0-6-6C55.9.5 34 .5 34 .5S12.1.5 7.5 1.8a8.5 8.5 0 0 0-6 6C.2 11.4 0 18.2 0 24s.2 12.6 1.5 16.2a8.5 8.5 0 0 0 6 6C12.1 47.5 34 47.5 34 47.5s21.9 0 26.5-1.3a8.5 8.5 0 0 0 6-6C67.8 36.6 68 29.8 68 24s-.2-12.6-1.5-16.2z" fill="#b8e050"/>
+                  <path d="M27 34l18-10-18-10v20z" fill="#050e05"/>
+                </svg>
+              </div>
+              <span class="play-label">Watch on YouTube</span>
+            </div>
+          </a>
+        </div>
+        <div class="video-caption">
+          <span class="pulse-dot green"></span> Live extension demonstration — Chrome browser
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCUMENTATION -->
+  <section class="section section-dark" id="docs">
+    <div class="container">
+      <div class="section-label">// DOCUMENTATION</div>
+      <h2 class="section-title">Everything You <span class="accent">Need to Know</span></h2>
+      <p class="section-desc">
+        Full project documentation — from architecture and requirements to testing results and academic references.
+      </p>
+
+      <div class="docs-grid">
+
+        <a href="P0_Final_Report.pdf" target="_blank" class="doc-card featured">
+          <div class="doc-icon">📄</div>
+          <div class="doc-info">
+            <div class="doc-tag">PRIMARY</div>
+            <h3>Final Project Report</h3>
+            <p>Complete 16-page technical report covering architecture, multi-agent pipeline design, implementation details, testing results, and academic references.</p>
+          </div>
+          <div class="doc-arrow">↗</div>
+        </a>
+
+        <a href="#" class="doc-card">
+          <div class="doc-icon">🏗️</div>
+          <div class="doc-info">
+            <div class="doc-tag">DESIGN</div>
+            <h3>System Architecture</h3>
+            <p>Three-tier client-server design, agent pipeline orchestration, and graceful degradation pathways.</p>
+          </div>
+          <div class="doc-arrow">↗</div>
+        </a>
+
+        <a href="FYP_I_SRS_PhisherZero.docx" class="doc-card">
+          <div class="doc-icon">📋</div>
+          <div class="doc-info">
+            <div class="doc-tag">REQUIREMENTS</div>
+            <h3>Software Requirements Specification</h3>
+            <p>Functional and non-functional requirements gathered from end users, institutional users, and developers.</p>
+          </div>
+          <div class="doc-arrow">↗</div>
+        </a>
+
+        <a href="FYP_I_SDS_PhisherZero (2).docx" class="doc-card">
+          <div class="doc-icon">🧪</div>
+          <div class="doc-info">
+            <div class="doc-tag">TESTING</div>
+            <h3>Software Development Specification</h3>
+            <p>Unit, integration, and performance testing results against PhishTank benchmarks. False positive and negative rates.</p>
+          </div>
+          <div class="doc-arrow">↗</div>
+        </a>
+
+        <!--<a href="#" class="doc-card">
+          <div class="doc-icon">🔌</div>
+          <div class="doc-info">
+            <div class="doc-tag">API</div>
+            <h3>API Reference</h3>
+            <p>POST /analyze endpoint specification, request/response schemas, and integration guide for developers.</p>
+          </div>
+          <div class="doc-arrow">↗</div>
+        </a>-->
+
+        <a href="Literature Review_Phisher Zero (1) (1).docx" class="doc-card">
+          <div class="doc-icon">📚</div>
+          <div class="doc-info">
+            <div class="doc-tag">RESEARCH</div>
+            <h3>Literature Review</h3>
+            <p>20-reference survey of phishing detection approaches: rule-based, ML, transformer-based, hybrid, and browser-integrated systems.</p>
+          </div>
+          <div class="doc-arrow">↗</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DOWNLOAD CTA -->
+  <section class="section cta-section" id="download">
+    <div class="container">
+      <div class="cta-glow"></div>
+      <div class="cta-content">
+        <img src="fish.png" alt="Phisher Zero" class="cta-logo" />
+        <h2 class="cta-title">Stop Phishing <span class="accent">Before It Starts</span></h2>
+        <p class="cta-desc">
+          Free. Open source. Works on any Chromium browser. No setup needed beyond loading the extension.
+          Your first line of defence — powered by four AI agents working in concert.
+        </p>
+        <a href="https://chrome.google.com/webstore" target="_blank" class="btn btn-primary btn-large">
+          <span class="btn-icon">⬇</span> Download Now — Add to Chrome
+        </a>
+        <div class="cta-footnote">Compatible with Chrome, Edge, Brave, and all Chromium-based browsers · Manifest V3</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section" id="team">
+    <div class="container">
+      <div class="section-label">// TEAM</div>
+      <h2 class="section-title">Built By <span class="accent">:</span></h2>
+      <p class="section-desc">Final Year Project — Spring 2026 · National University of Computer and Emerging Sciences, Karachi</p>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar">ZJ</div>
+          <div class="team-name">Zehra Jabeen Mirza</div>
+          <div class="team-id">22K-4781</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">MS</div>
+          <div class="team-name">M. Shehryar Zubair Khan</div>
+          <div class="team-id">22K-4736</div>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar">AG</div>
+          <div class="team-name">Anas Ghazi</div>
+          <div class="team-id">21L-5081</div>
+        </div>
+      </div>
+
+      <div class="supervisors">
+        <div class="supervisor">
+          <span class="sup-role">Project Supervisor</span>
+          <span class="sup-name">Sir Minhal Raza</span>
+        </div>
+        <div class="supervisor">
+          <span class="sup-role">Co-Supervisors</span>
+          <span class="sup-name">Miss Saeeda Kanwal &amp; Sir Usama Antuley</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="fish.png" alt="Phisher Zero" />
+          <span>PHISHER<span class="accent">ZERO</span></span>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#demo">Demo</a>
+          <a href="#docs">Docs</a>
+          <a href="P0_Final_Report.pdf" target="_blank">Final Report</a>
+        </div>
+        <div class="footer-copy">
+          © 2026 Phisher Zero · Karachi · Spring FYP-115 2026 · Built by Zehra Jabeen Mirza, M. Shehryar Zubair Khan, and Anas Ghazi
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
