@@ -8,7 +8,7 @@ function loadVideo() {
   if (!thumb) return;
   const iframe = document.createElement('iframe');
   iframe.id = 'demo-video';
-  iframe.src = 'https://www.youtube.com/embed/2whWWjuWghw?autoplay=1&rel=0';
+  iframe.src = 'https://www.youtube.com/embed/WSHNjwyXtrc?autoplay=1&rel=0';
   iframe.title = 'Phisher Zero Demo';
   iframe.frameBorder = '0';
   iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
